@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfing Forecast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .good-surf {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Surfing Forecast</h1>
+    </header>
+    <div id="forecast">
+        <table>
+            <tr>
+                <th></th> <!-- Empty header for hours/days -->
+                <th>Hour/Day 1</th>
+                <th>Hour/Day 2</th>
+                <th>Hour/Day 3</th>
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+                <td>Waves Height (ft)</td>
+                <td>...</td> <!-- Forecast data will be dynamically loaded here -->
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>Waves Direction</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>Wind Strength (mph)</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>Wind Direction</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>Period</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>Rain</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </table>
+    </div>
+    <div class="good-surf">
+        Good surf!
+    </div>
+</body>
+</html>
+
