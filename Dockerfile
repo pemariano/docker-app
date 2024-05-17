@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Copy the environment file from the host to the container
-COPY /etc/environment /app/.env
+#COPY /etc/environment /app/.env
 
 # Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
