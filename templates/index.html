@@ -44,28 +44,58 @@
     </header>
     <div id="forecast">
         <table>
-            <tr>
-                <th>Timestamp</th>
-                <th>Wind Strength (mph)</th>
-                <th>Wind Direction</th>
-                <th>Swell Strength</th>
-                <th>Swell Direction</th>
-                <th>Swell Period</th>
-                <th>Rain</th>
-                <th>Temperature</th>
-            </tr>
-            {% for row in data %}
-            <tr>
-                <td>{{ row[0] }}</td>
-                <td>{{ row[1] }}</td>
-                <td>{{ row[2] }}</td>
-                <td>{{ row[3] }}</td>
-                <td>{{ row[4] }}</td>
-                <td>{{ row[5] }}</td>
-                <td>{{ row[6] }}</td>
-                <td>{{ row[7] }}</td>
-            </tr>
-            {% endfor %}
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    {% for timestamp in data['timestamps'] %}
+                        <th>{{ timestamp }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wind Strength (mph)</td>
+                    {% for value in data['wind_strength'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Wind Direction</td>
+                    {% for value in data['wind_direction'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Swell Strength</td>
+                    {% for value in data['swell_strength'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Swell Direction</td>
+                    {% for value in data['swell_direction'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Swell Period</td>
+                    {% for value in data['swell_period'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Rain</td>
+                    {% for value in data['rain'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    {% for value in data['temperature'] %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
         </table>
     </div>
     <div class="good-surf">
